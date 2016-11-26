@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+			<title>範例</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+		<script>
+			$(document).ready(function(){
+				$("#b1").click(function(){
+					$("p:first").hide();
+				});
+				$("#b2").click(function(){
+					$("#p2").hide();
+				});
+				$("#b3").click(function(){
+					$("p.third").hide();
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<p id=p1>Hide paragraph 1</p>
+		<p id=p2>Hide paragraph 2</p>
+		<p id=p3 class=third>Hide paragraph 3</p>
+		<button id=b1>Hide p1</button><button id=b2>Hide p2</button><button id=b3>Hide p3</button>
+	</body>
+</html>

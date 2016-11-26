@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+			<title>範例</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+		<script>
+			$(document).ready(function(){
+				$("img").each(function( index ) {
+					if( index==0 ){	$(this).show( 0 ); }
+					else{ $(this).hide( 0 ); }
+				});
+				
+				$("button").click(function(){
+					$("#f0").delay( 100 ).hide( 0 ).delay( 400 ).show( 0 );
+					$("#f1").delay( 100 ).show( 0 ).delay( 100 ).hide( 0 );
+					$("#f2").delay( 200 ).show( 0 ).delay( 100 ).hide( 0 );
+					$("#f3").delay( 300 ).show( 0 ).delay( 100 ).hide( 0 );
+					$("#f4").delay( 400 ).show( 0 ).delay( 100 ).hide( 0 ); 
+				});
+			});
+		</script>
+		<style>
+			#spin {
+				position:absolute;
+				display:block;
+				top:20px;
+				left:0px;
+			}
+			#spin img {
+				position:absolute;
+			}
+		</style>
+	</head>
+	<body>
+		<div id=spin>
+			<img src="spin.png" id=f0>
+			<img src="spin1.png" id=f1>
+			<img src="spin2.png" id=f2>
+			<img src="spin3.png" id=f3>
+			<img src="spin4.png" id=f4>
+		</div>
+		<button>Spin</button>
+	</body>
+</html>
